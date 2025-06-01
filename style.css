@@ -1,13 +1,76 @@
 
-body { font-family: 'Inter', sans-serif; background: #f9fafb; color: #111827; line-height: 1.6; margin: 0; padding: 0; }
-header { background: #1f2937; color: white; padding: 2rem; text-align: center; }
-h2 { font-size: 1.5rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-top: 2rem; }
-.timeline { border-left: 3px solid #3b82f6; padding-left: 2rem; margin-top: 2rem; }
-.event { margin-bottom: 1.5rem; }
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
-.skillbar { background: #f3f4f6; border-radius: 5px; padding: 0.5rem; }
-.skillbar span { font-weight: 600; display: block; margin-bottom: 0.3rem; }
-.dots { display: flex; gap: 0.3rem; }
-.dot { width: 12px; height: 12px; border-radius: 50%; background: #d1d5db; }
-.dot.filled { background: #3b82f6; }
-.chart-container { max-width: 600px; margin: 2rem auto; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #e5f0ff;
+  color: #111827;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+header {
+  background: #1f2937;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+section {
+  margin: 2rem 0;
+}
+h2 {
+  font-size: 1.4rem;
+  color: #1e3a8a;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+.timeline {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1rem;
+}
+.event {
+  margin-bottom: 1.5rem;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.skillbar {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.8rem;
+}
+.skillbar span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.dots {
+  display: flex;
+  gap: 0.3rem;
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d1d5db;
+}
+.dot.filled {
+  background: #3b82f6;
+}
+.chart-container {
+  max-width: 500px;
+  margin: 2rem auto;
+}
+.fa-icon {
+  margin-right: 0.5rem;
+  color: #2563eb;
+}
