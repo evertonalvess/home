@@ -129,6 +129,52 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+.timeline-horizontal .timeline-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.timeline-horizontal .timeline-item {
+  width: 250px;
+  background: #f3f4f6;
+  border-left: 4px solid #3b82f6;
+  padding: 0.8rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.timeline-horizontal .timeline-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timeline-horizontal .timeline-logo {
+  width: auto;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+  padding: 2px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+.timeline-horizontal .timeline-text {
+  font-size: 0.82rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.timeline-horizontal .year {
+  font-weight: bold;
+  color: #2563eb;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
 
 canvas {
   max-width: 100%;
