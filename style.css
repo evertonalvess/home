@@ -73,7 +73,8 @@ h2 {
 .fa-icon {
   margin-right: 0.5rem;
   color: #2563eb;
-}.timeline-horizontal .timeline-container {
+}
+.timeline-horizontal .timeline-container {
   display: flex;
   overflow-x: auto;
   gap: 2rem;
