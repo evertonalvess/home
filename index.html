@@ -15,7 +15,49 @@
     <div include-html="timeline.html"></div>
     <div include-html="grafico.html"></div>
     <div include-html="skills.html"></div>
-    <div include-html="grafico.html"></div>
+  <script src="chart.min.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const ctx1 = document.getElementById('graficoProjetosSetor').getContext('2d');
+      const ctx2 = document.getElementById('graficoAutomacaoSetor').getContext('2d');
+
+      new Chart(ctx1, {
+        type: 'bar',
+        data: {
+          labels: ['Governo', 'Saúde', 'Educação', 'Financeiro'],
+          datasets: [{
+            label: 'Quantidade de Projetos',
+            data: [7, 2, 1, 1],
+            backgroundColor: '#3b82f6'
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: { x: { beginAtZero: true } }
+        }
+      });
+
+      new Chart(ctx2, {
+        type: 'bar',
+        data: {
+          labels: ['Governo', 'Saúde', 'Educação', 'Financeiro'],
+          datasets: [{
+            label: 'Projetos com Automação',
+            data: [5, 2, 1, 1],
+            backgroundColor: '#10b981'
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          plugins: { legend: { display: false } },
+          scales: { x: { beginAtZero: true } }
+        }
+      });
+    });
+  </script>
   </div>
   <script src="include.js"></script>
   <script src="script.js"></script>
