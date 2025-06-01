@@ -1,6 +1,65 @@
 <section>
-  <h2><i class="fas fa-chart-pie fa-icon"></i>Distribuição de Projetos por Setor</h2>
-  <div class="chart-container">
-    <canvas id="setoresChart"></canvas>
+  <h2><i class="fas fa-chart-bar fa-icon"></i>Distribuição de Projetos por Setor</h2>
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+    <div style="flex: 1 1 300px;">
+      <h3>Projetos por Setor</h3>
+      <canvas id="graficoProjetosSetor"></canvas>
+    </div>
+    <div style="flex: 1 1 300px;">
+      <h3>Projetos com Automação</h3>
+      <canvas id="graficoAutomacaoSetor"></canvas>
+    </div>
   </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctxProjetos = document.getElementById('graficoProjetosSetor').getContext('2d');
+  const ctxAutomacao = document.getElementById('graficoAutomacaoSetor').getContext('2d');
+
+  new Chart(ctxProjetos, {
+    type: 'bar',
+    data: {
+      labels: ['Governo', 'Saúde', 'Educação', 'Financeiro'],
+      datasets: [{
+        label: 'Quantidade de Projetos',
+        data: [7, 2, 1, 1],
+        backgroundColor: '#3b82f6'
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        title: { display: false }
+      },
+      scales: {
+        x: { beginAtZero: true }
+      }
+    }
+  });
+
+  new Chart(ctxAutomacao, {
+    type: 'bar',
+    data: {
+      labels: ['Governo', 'Saúde', 'Educação', 'Financeiro'],
+      datasets: [{
+        label: 'Projetos com Automação',
+        data: [5, 2, 1, 1],
+        backgroundColor: '#10b981'
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      plugins: {
+        legend: { display: false },
+        title: { display: false }
+      },
+      scales: {
+        x: { beginAtZero: true }
+      }
+    }
+  });
+</script>
