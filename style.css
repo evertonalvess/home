@@ -73,9 +73,30 @@ h2 {
 .fa-icon {
   margin-right: 0.5rem;
   color: #2563eb;
+}.timeline-horizontal .timeline-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 2rem;
+  padding: 1rem 0;
 }
+.timeline-horizontal .timeline-item {
+  min-width: 180px;
+  background: #f3f4f6;
+  border-left: 4px solid #3b82f6;
+  padding: 1rem;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.timeline-horizontal .year {
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 0.5rem;
+}
+
+
 canvas {
   max-width: 100%;
   background: white;
   border-radius: 10px;
 }
+
