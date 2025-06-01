@@ -70,6 +70,22 @@ h2 {
   max-width: 500px;
   margin: 2rem auto;
 }
+.chart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.chart-box {
+  flex: 1 1 400px;
+  max-width: 450px;
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
 .fa-icon {
   margin-right: 0.5rem;
   color: #2563eb;
@@ -93,7 +109,6 @@ h2 {
   color: #2563eb;
   margin-bottom: 0.5rem;
 }
-
 
 canvas {
   max-width: 100%;
