@@ -12,54 +12,57 @@
   </div>
 </section>
 
+<!-- Carregue a biblioteca Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- Execute os gráficos somente após o DOM estar pronto -->
 <script>
-  const ctxProjetos = document.getElementById('graficoProjetosSetor').getContext('2d');
-  const ctxAutomacao = document.getElementById('graficoAutomacaoSetor').getContext('2d');
+  window.addEventListener('DOMContentLoaded', () => {
+    const ctxProjetos = document.getElementById('graficoProjetosSetor').getContext('2d');
+    const ctxAutomacao = document.getElementById('graficoAutomacaoSetor').getContext('2d');
 
-  new Chart(ctxProjetos, {
-    type: 'bar',
-    data: {
-      labels: ['Governo', 'Saúde', 'Educação', 'Financeiro'],
-      datasets: [{
-        label: 'Quantidade de Projetos',
-        data: [7, 2, 1, 1],
-        backgroundColor: '#3b82f6'
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      plugins: {
-        legend: { display: false },
-        title: { display: false }
+    new Chart(ctxProjetos, {
+      type: 'bar',
+      data: {
+        labels: ['Governo', 'Saúde', 'Educação', 'Financeiro'],
+        datasets: [{
+          label: 'Quantidade de Projetos',
+          data: [7, 2, 1, 1],
+          backgroundColor: '#3b82f6'
+        }]
       },
-      scales: {
-        x: { beginAtZero: true }
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { beginAtZero: true }
+        }
       }
-    }
-  });
+    });
 
-  new Chart(ctxAutomacao, {
-    type: 'bar',
-    data: {
-      labels: ['Governo', 'Saúde', 'Educação', 'Financeiro'],
-      datasets: [{
-        label: 'Projetos com Automação',
-        data: [5, 2, 1, 1],
-        backgroundColor: '#10b981'
-      }]
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      plugins: {
-        legend: { display: false },
-        title: { display: false }
+    new Chart(ctxAutomacao, {
+      type: 'bar',
+      data: {
+        labels: ['Governo', 'Saúde', 'Educação', 'Financeiro'],
+        datasets: [{
+          label: 'Projetos com Automação',
+          data: [5, 2, 1, 1],
+          backgroundColor: '#10b981'
+        }]
       },
-      scales: {
-        x: { beginAtZero: true }
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          x: { beginAtZero: true }
+        }
       }
-    }
+    });
   });
 </script>
